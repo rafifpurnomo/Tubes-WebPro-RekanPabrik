@@ -243,7 +243,7 @@ li a:hover::after {
   width: 350px;
 }
 
-.icon {
+.icon{
   display: flex;
   gap: 15px;
 }
