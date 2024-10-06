@@ -134,25 +134,33 @@ li a:hover::after {
 }
 
 .slider {
-  display: flex;
-  align-items: center;
   width: 100%;
   overflow: hidden;
 }
 
 .slides {
   display: flex;
-  transition: transform 2s ease-out;
+  animation: scroll 20s linear infinite;
+  gap: 20px;
 }
 
 .slide {
-  flex: 0 0 294px;
   border: 2px solid black;
   border-radius: 10px;
-  margin: 10px;
-  padding: 20px;
-  box-sizing: border-box;
+  padding: 10px;
+  width: 294px;
+  flex-shrink: 0;
 }
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 
 .slide img {
   max-width: 100%;
